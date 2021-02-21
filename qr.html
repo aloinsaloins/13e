@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <title>qrcode</title>
+    <meta charset="UTF-8">
+    <title>QRCode</title>
+    <link rel="stylesheet" media="all" href="./css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
-    <div id="qrcode">
-        <canvas width="256" height="256"></canvas>
+    <div class="wrap">
+        <div class="inner">
+            <div id="qrcode">
+            </div>
+            <p>QRCode</p>
+        </div>
     </div>
-    <!-- js読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/jquery.qrcode.js"></script>
-    <script> 
-        $(function(){
-            //現在表示しているページのURLをQRコード化する
-            $('#qrcode').qrcode(location.href);     
-        });  
-    </script> 
 </body>
 </html>
