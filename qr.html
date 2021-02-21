@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>qrcode</title>
+</head>
+<body>
+    <div id="main">
+        <div id="qrcode"></div>
+    </div>
+
+    <!-- js読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.js"></script>
+
+    <script> 
+        $(function(){
+            //現在表示しているページのURLをQRコード化する
+            $('#qrcode').qrcode({
+                text: location.href,
+                width: 600, //横幅
+                height: 600, //縦幅
+                render: 'canvas', //tableまたはcanvas
+            });     
+        });  
+    </script> 
+</body>
+</html>
